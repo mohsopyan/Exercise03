@@ -1,34 +1,31 @@
-// Soal1 "Write a code to swap the case of each character from string"
-// first character = The QuiCk BrOwN Fox -> tHE qUIcK bRoWn fOX
-
-let firstChar: string = "The QuiCk BrOwN Fox";
-let toSwapChar: string = ""
-let i: number = 0;
-
-while(i < firstChar.length) {
-    console.log(i)
-    if(firstChar[i] === firstChar[i].toUpperCase()) {
-        toSwapChar += firstChar[i].toLowerCase();
-    }else {
-        toSwapChar += firstChar[i].toUpperCase();
-    }
-
-    i++;
+// Soal 1
+const num1: number = 9;
+for(let i = 1; i <= 10; i++) {
+    console.log(`${num1} X ${i}`);
 }
-console.log(`${firstChar} -> ${toSwapChar}`)
 
+// Soal 2
+let str: string = "madam";
+let rev: string = str.split("").reverse().join("");
+console.log(str === rev ? `${str} -> palindrom` : `${str} -> not palindrom`);
 
-// Soal2 "Write a code to find the largest of two given integers"
-let num1: number = 42, num2: number = 27;
+// Soal 3
+let cm: number = 100000;
+const cmToKm: number = cm / 100000;
 
-// Solution
-console.log(Math.max(num1, num1));
+console.log(`100000 -> ${cmToKm} Km`);
 
-// Soal5 "Write a code to change every letter a into * from a string of input"
-// "An apple a day keeps the doctor away" -> "*n *pple * d*y keeps the doctor *w*y"
+// Soal 4
+let num2: number = 1000;
+const numToCurr = num2.toLocaleString("in-ID", {
+    style: "currency",
+    currency: "IDR"
+});
 
-let _string: string = "An apple a day keeps the doctor away";
+console.log(`1000 -> ${numToCurr}`);
 
-// Solution -> string built in method replace
-console.log(_string.replace(/[A,a]/g, "*"));
+// Soal 5
+let str2: string = "Hello World";
+const searchStr: string = "ell";
 
+console.log(`ell -> ${str2.replace(searchStr, "")}`);
